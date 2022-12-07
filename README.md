@@ -22,6 +22,7 @@
 ## Your Assignment
 
 - [ ] Create a slicing based on the mockup you choose with Atomic Design principle
+    - [design](https://www.figma.com/file/07Wt6fDKFZhMSyHxWvDybf/Design-Drill---Ready-To-Upload?node-id=526%3A159&t=JYvMpYi9p90GgTZC-0)
 - [ ] (Optional) Create a dark mode of your slicing
 
 ## Useful Links
