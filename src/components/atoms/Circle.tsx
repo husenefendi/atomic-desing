@@ -9,6 +9,8 @@ const CircleElement = styled.div<ICircle>`
   height: ${props => props.size}px;
   width: ${props => props.size}px;
   background-color: ${props => props.theme.colors.primary};
+  position: absolute;
+  opacity: 0.7;
 `;
 CircleElement.defaultProps = {
   size: 100,

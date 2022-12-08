@@ -5,7 +5,8 @@ interface IColorType {
 }
 const Background = styled.div<IColorType>`
   background-color: ${props => props.theme.colors[props.color] ?? props.color};
-  height: 100%;
+  position: relative;
+  height: 100vh;
 `;
 
 Background.defaultProps = {
