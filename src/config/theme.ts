@@ -4,7 +4,8 @@ const colors = {
   primary: '#0B2470',
   secondary: '#376BF0',
   white: '#FBFCFF',
-  red: '#DB4437'
+  red: '#DB4437',
+  grey: '#f1f2f3'
 }
 
 const theme = { colors }
@@ -30,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
 html, body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+  background-color: ${props => props.theme.colors.grey};
 }
 /*
   Typographic tweaks!
