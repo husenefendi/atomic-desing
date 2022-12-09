@@ -5,7 +5,9 @@ const colors = {
   secondary: '#376BF0',
   white: '#FBFCFF',
   red: '#DB4437',
-  grey: '#f1f2f3'
+  grey: '#f1f2f3',
+  black: '#2C3333',
+  disable: '#EAEAEA'
 }
 
 const theme = { colors }

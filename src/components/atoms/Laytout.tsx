@@ -1,5 +1,19 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+import {
+  space,
+  layout,
+  typography,
+  color,
+  display,
+  DisplayProps,
+  SpaceProps,
+  ColorProps,
+  LayoutProps,
+  TypographyProps,
+  flexDirection,
+  FlexDirectionProps,
+} from 'styled-system';
 
 interface IProps {
   children?: ReactNode;
@@ -23,5 +37,22 @@ export const Container = styled.div`
   width: 600px;
   max-width: 100%;
   display: flex;
-  background-color: pink;
+  background-color: ${props => props.theme.colors.grey};
+  height: 100%;
+`;
+
+interface IBox
+  extends DisplayProps,
+    SpaceProps,
+    ColorProps,
+    LayoutProps,
+    TypographyProps,
+    FlexDirectionProps {}
+export const Box = styled.div<IBox>`
+  ${color}
+  ${space}
+  ${layout}
+  ${typography}
+  ${display}
+  ${flexDirection}
 `;

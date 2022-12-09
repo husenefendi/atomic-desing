@@ -13,3 +13,9 @@ Background.defaultProps = {
   color: 'primary',
 };
 export default Background;
+
+export const FullHeightBackground = styled(Background)`
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+`;

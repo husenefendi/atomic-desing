@@ -7,7 +7,9 @@ declare module 'styled-components' {
             secondary: string;
             white: string,
             red: string,
-            grey: string
+            grey: string,
+            black: string,
+            disable: string
         };
     }
 }

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Background from '../../components/atoms/Backgroun';
+import Background from '../../components/atoms/Background';
 import CircleElement from '../../components/atoms/Circle';
 
 const H1 = styled.h1.attrs({
@@ -25,11 +25,11 @@ const H1 = styled.h1.attrs({
 
 const WelcomePage = () => {
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     return navigate('/signin', { replace: true });
-  //   }, 5000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      return navigate('/signin', { replace: true });
+    }, 5000);
+  }, []);
   return (
     <Background
       color="secondary"
