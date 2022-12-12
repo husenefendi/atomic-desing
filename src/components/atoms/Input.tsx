@@ -19,22 +19,20 @@ const Input = styled.input`
 
 export const InputIcon = styled(Input)`
   width: 100%;
-  border: ${props => `1px ${props.theme.colors.secondary} solid`};
+  border: ${props => `1px ${props.theme.colors.grey} solid`};
   border-radius: 4px;
   outline: none;
   box-sizing: border-box;
   transition: 0.3s;
+  padding: 4px 8px;
   cursor: pointer;
-
+  background-color: ${props => props.theme.colors.grey};
   &:focus {
-    border-color: dodgerBlue;
-    box-shadow: 0 0 8px 0 dodgerBlue;
+    border-color: ${props => props.theme.colors.secondary};
+    background-color: ${props => props.theme.colors.white};
   }
 
   :focus + .left-icon {
-    svg {
-      fill: dodgerBlue;
-    }
   }
 `;
 

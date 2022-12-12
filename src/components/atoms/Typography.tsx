@@ -1,3 +1,5 @@
+import React from 'react';
+import { LinkProps, Link as MainLink } from 'react-router-dom';
 import styled from 'styled-components';
 import {
   TypographyProps,
@@ -5,6 +7,8 @@ import {
   typography,
   ColorProps,
   color,
+  SpaceProps,
+  space,
 } from 'styled-system';
 
 interface IDefault extends TypographyProps, ColorProps {}
@@ -49,6 +53,7 @@ export default Heading;
 interface IText extends IDefault {
   type?: string;
 }
+
 export const Text = styled.div.attrs<IText>(props => ({
   as: props.type || 'p',
 }))<IText>`
@@ -69,3 +74,12 @@ export const Text = styled.div.attrs<IText>(props => ({
     },
   })}
 `;
+
+type IHref = LinkProps & IDefault & SpaceProps;
+
+export const Link = styled(MainLink)<IHref>`
+  ${typography}
+  ${color}
+  ${space}
+`;
+Link.defaultProps = {};

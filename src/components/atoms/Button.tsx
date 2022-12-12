@@ -1,13 +1,32 @@
 import styled from 'styled-components';
+import {
+  color,
+  ColorStyleProps,
+  width,
+  WidthProps,
+  BackgroundColorProps,
+  background,
+  DisplayProps,
+  display,
+} from 'styled-system';
 
-export const Button = styled.button`
-  background-color: palevioletred;
+interface IButton
+  extends ColorStyleProps,
+    WidthProps,
+    BackgroundColorProps,
+    DisplayProps {}
+
+export const Button = styled.button<IButton>`
   border: 1px solid palevioletred;
   border: none;
   border-radius: 4px;
   color: #fff;
   padding: 8px;
   cursor: pointer;
+  ${color}
+  ${width}
+  ${background}
+  ${display}
 `;
 
 export const ButtonOutlined = styled(Button)`

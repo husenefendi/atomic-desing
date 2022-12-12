@@ -1,18 +1,24 @@
-import styled from 'styled-components';
-import { Box } from '../atoms/Laytout';
-import Input, { InputIcon } from '../atoms/Input';
-import { ButtonIcon } from '../atoms/Button';
-import { Text } from '../atoms/Typography';
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
-interface ITextfield {
+import { Box } from '../atoms/Laytout';
+import { InputIcon } from '../atoms/Input';
+import { Text } from '../atoms/Typography';
+
+import classNames from '../../tools/classNames';
+
+interface ITextfield extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   icon?: React.ReactNode;
+  parentClass?: string;
 }
 
 const StyledInput = styled.div`
   &.inputWithIcon {
     position: relative;
+  }
+  label {
+    color: ${props => props.theme.colors.black};
   }
 
   .left-icon {
@@ -30,10 +36,9 @@ const StyledInput = styled.div`
     background: none;
     border: none;
     position: absolute;
-    right: 5px;
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
+    right: 0px;
     padding: 6px;
+    font-size: 20px;
     svg {
       fill: black;
       transition: 0.3s;
@@ -42,6 +47,8 @@ const StyledInput = styled.div`
 `;
 
 const TextField = (props: ITextfield) => {
+  const inputProps = { ...props };
+  delete inputProps.style;
   const [text, setText] = useState('');
   const handleChange = (event: any) => {
     setText(event.target.value);
@@ -51,22 +58,31 @@ const TextField = (props: ITextfield) => {
   };
 
   return (
-    <StyledInput className={'inputWithIcon'}>
+    <StyledInput
+      className={classNames('inputWithIcon', props?.parentClass ?? '')}
+      style={{ ...props?.style }}
+    >
       {props?.label && <Text type="label">{props?.label}</Text>}
       <Box display={'block'}>
         <InputIcon
           type="text"
           value={text}
           onChange={handleChange}
-          placeholder="Search"
           onSubmit={e => {
             e.preventDefault();
           }}
+          {...inputProps}
         />
         {props?.icon && props.icon}
       </Box>
     </StyledInput>
   );
+};
+
+TextField.defaultProps = {
+  placeholder: 'Your Name',
+  label: 'Name',
+  parentClass: '',
 };
 
 export default TextField;
