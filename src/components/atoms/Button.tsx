@@ -37,5 +37,4 @@ export const ButtonOutlined = styled(Button)`
 export const ButtonIcon = styled(Button)`
   background-color: transparent;
   border: 0px transparent solid;
-  color: inherit;
 `;

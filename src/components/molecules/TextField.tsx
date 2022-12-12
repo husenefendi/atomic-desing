@@ -49,13 +49,6 @@ const StyledInput = styled.div`
 const TextField = (props: ITextfield) => {
   const inputProps = { ...props };
   delete inputProps.style;
-  const [text, setText] = useState('');
-  const handleChange = (event: any) => {
-    setText(event.target.value);
-  };
-  const clearInput = () => {
-    setText('');
-  };
 
   return (
     <StyledInput
@@ -64,15 +57,7 @@ const TextField = (props: ITextfield) => {
     >
       {props?.label && <Text type="label">{props?.label}</Text>}
       <Box display={'block'}>
-        <InputIcon
-          type="text"
-          value={text}
-          onChange={handleChange}
-          onSubmit={e => {
-            e.preventDefault();
-          }}
-          {...inputProps}
-        />
+        <InputIcon type="text" value={props?.value} {...inputProps} />
         {props?.icon && props.icon}
       </Box>
     </StyledInput>
