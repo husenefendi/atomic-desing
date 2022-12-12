@@ -11,6 +11,7 @@ import TextField from '../../components/molecules/TextField';
 
 const SigninPage = () => {
   const [showPassword, setShowPassword] = useState<Boolean>(false);
+  const [email, setEmail] = useState<string>('');
   return (
     <FullHeightBackground color="white">
       <CircleElement
@@ -18,9 +19,9 @@ const SigninPage = () => {
         style={{
           opacity: 1,
           right: -75,
-          top: -75,
+          top: -100,
         }}
-        size={150}
+        size={200}
       />
       <Box
         color="primary"
@@ -40,7 +41,12 @@ const SigninPage = () => {
           </Text>
         </Box>
         <Box mt={50} style={{ flex: 3 }}>
-          <TextField type="email" label="Email" />
+          <TextField
+            type="email"
+            label="Email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
           <TextField
             type={showPassword ? 'text' : 'password'}
             label="Password"

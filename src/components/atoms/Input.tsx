@@ -24,7 +24,7 @@ export const InputIcon = styled(Input)`
   outline: none;
   box-sizing: border-box;
   transition: 0.3s;
-  padding: 4px 8px;
+  padding: 5px 10px;
   cursor: pointer;
   background-color: ${props => props.theme.colors.grey};
   &:focus {
