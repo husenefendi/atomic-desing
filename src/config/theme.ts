@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 
-const colors = {
+export const colors = {
   primary: '#0B2470',
   secondary: '#376BF0',
   white: '#FBFCFF',
