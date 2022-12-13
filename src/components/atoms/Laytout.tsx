@@ -13,6 +13,8 @@ import {
   TypographyProps,
   flexDirection,
   FlexDirectionProps,
+  PositionProps,
+  position,
 } from 'styled-system';
 
 interface IProps {
@@ -47,7 +49,9 @@ interface IBox
     ColorProps,
     LayoutProps,
     TypographyProps,
-    FlexDirectionProps {}
+    FlexDirectionProps,
+    PositionProps {}
+    
 export const Box = styled.div<IBox>`
   ${color}
   ${space}
@@ -55,4 +59,5 @@ export const Box = styled.div<IBox>`
   ${typography}
   ${display}
   ${flexDirection}
+  ${position}
 `;
