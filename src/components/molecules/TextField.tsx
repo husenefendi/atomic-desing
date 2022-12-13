@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { Box } from '../atoms/Laytout';
-import { InputIcon } from '../atoms/Input';
+import Input, { InputIcon } from '../atoms/Input';
 import { Text } from '../atoms/Typography';
 
 import classNames from '../../tools/classNames';
@@ -47,18 +47,19 @@ const StyledInput = styled.div`
 `;
 
 const TextField = (props: ITextfield) => {
-  const inputProps = { ...props };
-  delete inputProps.style;
+  // const inputProps = { ...props };
+  // delete inputProps.style;
+  const { style, parentClass, label, icon: Icon, ...rest } = props;
 
   return (
     <StyledInput
-      className={classNames('inputWithIcon', props?.parentClass ?? '')}
-      style={{ ...props?.style }}
+      className={classNames('inputWithIcon', parentClass ?? '')}
+      style={{ ...style }}
     >
-      {props?.label && <Text type="label">{props?.label}</Text>}
+      {label && <Text type="label">{label}</Text>}
       <Box display={'block'}>
-        <InputIcon type="text" value={props?.value} {...inputProps} />
-        {props?.icon && props.icon}
+        <InputIcon type="text" {...rest} />
+        {Icon && Icon}
       </Box>
     </StyledInput>
   );

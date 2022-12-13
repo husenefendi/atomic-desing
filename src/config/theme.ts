@@ -10,8 +10,21 @@ export const colors = {
   disable: '#EAEAEA'
 }
 
-const theme = { colors }
+const theme = { colors, mode: 'light' }
 export default theme
+
+export const darkTheme = {
+  mode: 'dark',
+  colors: {
+    primary: '#f4db8f',
+    secondary: '#c8940f',
+    white: '#040300',
+    red: '#24bbc8',
+    grey: '#0e0d0c',
+    black: '#d3cccc',
+    disable: '#151515'
+  }
+}
 
 
 export const GlobalStyle = createGlobalStyle`
