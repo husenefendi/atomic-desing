@@ -4,8 +4,9 @@ import styled from 'styled-components';
 
 import Background from '../../components/atoms/Background';
 import CircleElement from '../../components/atoms/Circle';
+import { Text } from '../../components/atoms/Typography';
 
-const H1 = styled.h1.attrs({
+const H1 = styled(Text).attrs({
   className: 'animated bounce',
 })`
   color: ${props => props.theme.colors.white};
@@ -25,11 +26,11 @@ const H1 = styled.h1.attrs({
 
 const WelcomePage = () => {
   const navigate = useNavigate();
-  useEffect(() => {
-    setTimeout(() => {
-      return navigate('/signin', { replace: true });
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     return navigate('/signin', { replace: true });
+  //   }, 5000);
+  // }, []);
   return (
     <Background
       color="secondary"
@@ -74,7 +75,7 @@ const WelcomePage = () => {
         size={325}
       />
 
-      <H1 className="">Welcome</H1>
+      <H1 type='h1'>Welcome</H1>
     </Background>
   );
 };
