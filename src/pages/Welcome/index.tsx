@@ -47,6 +47,7 @@ const WelcomePage = () => {
       }}
     >
       <CircleElement
+        backgroundColor={'primary'}
         className="-top-24 -right-16 z-10"
         style={{
           top: -100,
@@ -55,6 +56,7 @@ const WelcomePage = () => {
         size={325}
       />
       <CircleElement
+        backgroundColor={'primary'}
         className="-top-52 right-1 z-10"
         size={325}
         style={{
@@ -63,6 +65,7 @@ const WelcomePage = () => {
         }}
       />
       <CircleElement
+        backgroundColor={'primary'}
         style={{
           bottom: -100,
           left: -70,
@@ -70,6 +73,7 @@ const WelcomePage = () => {
         size={325}
       />
       <CircleElement
+        backgroundColor={'primary'}
         style={{
           bottom: -130,
           left: 70,

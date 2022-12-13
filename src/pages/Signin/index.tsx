@@ -15,7 +15,7 @@ const SigninPage = () => {
   return (
     <FullHeightBackground color="white">
       <CircleElement
-        color="secondary"
+        backgroundColor="secondary"
         style={{
           opacity: 1,
           right: -75,
