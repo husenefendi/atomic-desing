@@ -56,6 +56,7 @@ interface IText extends IDefault {
 
 export const Text = styled.div.attrs<IText>(props => ({
   as: props.type || 'p',
+  color: 'black',
 }))<IText>`
   ${color}
   ${variant({

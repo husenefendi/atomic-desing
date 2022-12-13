@@ -40,7 +40,7 @@ const StyledInput = styled.div`
     padding: 6px;
     font-size: 20px;
     svg {
-      fill: black;
+      fill: ${props => props.theme.colors.black};
       transition: 0.3s;
     }
   }
