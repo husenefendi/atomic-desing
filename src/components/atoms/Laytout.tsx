@@ -15,21 +15,11 @@ import {
   FlexDirectionProps,
   PositionProps,
   position,
+  BackgroundColorProps,
+  backgroundColor,
+  background,
+  BackgroundProps,
 } from 'styled-system';
-
-interface IProps {
-  children?: ReactNode;
-}
-
-const Layout: React.FC<IProps> = ({ children }) => {
-  return (
-    <div className="container mx-auto max-w-sm bg-red-100 h-screen relative overflow-hidden">
-      {children}
-    </div>
-  );
-};
-
-export default Layout;
 
 export const Container = styled.div`
   padding-right: 16px;
@@ -50,8 +40,9 @@ interface IBox
     LayoutProps,
     TypographyProps,
     FlexDirectionProps,
+    BackgroundProps,
     PositionProps {}
-    
+
 export const Box = styled.div<IBox>`
   ${color}
   ${space}
@@ -60,4 +51,18 @@ export const Box = styled.div<IBox>`
   ${display}
   ${flexDirection}
   ${position}
+  ${background}
 `;
+
+export const BoxBackground = styled(Box)`
+  position: relative;
+  height: 100vh;
+`;
+
+export const FullHeightBackground = styled(BoxBackground)`
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+`;
+
+export default Box;

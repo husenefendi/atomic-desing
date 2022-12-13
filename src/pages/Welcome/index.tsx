@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Background from '../../components/atoms/Background';
 import CircleElement from '../../components/atoms/Circle';
 import { Text } from '../../components/atoms/Typography';
+import { BoxBackground } from '../../components/atoms/Laytout';
 
 const H1 = styled(Text).attrs({
   className: 'animated bounce',
@@ -34,8 +34,8 @@ const WelcomePage = () => {
   }, []);
 
   return (
-    <Background
-      color="secondary"
+    <BoxBackground
+      backgroundColor={'secondary'}
       style={{
         overflow: 'hidden',
         margin: '0px -16px',
@@ -82,7 +82,7 @@ const WelcomePage = () => {
       />
 
       <H1 type="h1">Welcome</H1>
-    </Background>
+    </BoxBackground>
   );
 };
 export default WelcomePage;

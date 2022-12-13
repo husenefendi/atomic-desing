@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { color, ColorProps, background, BackgroundProps } from 'styled-system';
 
-interface ICircle extends ColorProps {
+interface ICircle extends ColorProps, BackgroundProps {
   size?: number;
 }
 
@@ -16,6 +16,5 @@ const CircleElement = styled.div<ICircle>`
 `;
 CircleElement.defaultProps = {
   size: 100,
-  color: 'primary',
 };
 export default CircleElement;

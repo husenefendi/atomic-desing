@@ -3,7 +3,7 @@ import { HiOutlineArrowLeft } from 'react-icons/hi';
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 
-import { FullHeightBackground } from '../../components/atoms/Background';
+import { FullHeightBackground } from '../../components/atoms/Laytout';
 import { Box } from '../../components/atoms/Laytout';
 import CircleElement from '../../components/atoms/Circle';
 import { ButtonIcon } from '../../components/atoms/Button';
@@ -28,7 +28,7 @@ const Signup = () => {
     re_password: '',
   });
   return (
-    <FullHeightBackground color="white">
+    <FullHeightBackground background="white">
       <CircleElement
         backgroundColor="secondary"
         style={{
@@ -39,7 +39,7 @@ const Signup = () => {
         size={200}
       />
       <Box
-        color="primary"
+        backgroundColor="white"
         style={{
           flex: 1,
           flexDirection: 'column',

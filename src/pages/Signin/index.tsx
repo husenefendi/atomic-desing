@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible, AiOutlineGoogle } from 'react-icons/ai';
 // import { Link } from 'react-router-dom';
 
-import { FullHeightBackground } from '../../components/atoms/Background';
+import { FullHeightBackground } from '../../components/atoms/Laytout';
 import { Button, ButtonIcon } from '../../components/atoms/Button';
 import CircleElement from '../../components/atoms/Circle';
 import { Box } from '../../components/atoms/Laytout';
@@ -13,7 +13,7 @@ const SigninPage = () => {
   const [showPassword, setShowPassword] = useState<Boolean>(false);
   const [email, setEmail] = useState<string>('');
   return (
-    <FullHeightBackground color="white">
+    <FullHeightBackground background={'white'}>
       <CircleElement
         backgroundColor="secondary"
         style={{
@@ -24,7 +24,7 @@ const SigninPage = () => {
         size={200}
       />
       <Box
-        color="primary"
+        backgroundColor={'white'}
         style={{
           flex: 1,
           flexDirection: 'column',
