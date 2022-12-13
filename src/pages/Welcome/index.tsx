@@ -26,11 +26,13 @@ const H1 = styled(Text).attrs({
 
 const WelcomePage = () => {
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     return navigate('/signin', { replace: true });
-  //   }, 5000);
-  // }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      return navigate('/signin', { replace: true });
+    }, 5000);
+  }, []);
+
   return (
     <Background
       color="secondary"
@@ -75,7 +77,7 @@ const WelcomePage = () => {
         size={325}
       />
 
-      <H1 type='h1'>Welcome</H1>
+      <H1 type="h1">Welcome</H1>
     </Background>
   );
 };
